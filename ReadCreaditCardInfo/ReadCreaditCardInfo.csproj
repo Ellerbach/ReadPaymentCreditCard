@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Iot.Device.Bindings" Version="1.1.0-prerelease.20257.1" />
+    <PackageReference Include="PCSC" Version="5.0.0" />
+    <PackageReference Include="System.Device.Gpio" Version="1.1.0-prerelease.20257.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\UsbPcscReader\UsbPcscReader.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="LibFT4222.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
